@@ -41,6 +41,9 @@ app.get('/profile/:id', (req, res) => { getProfile.handleGetProfile(req, res, kn
 // SUBMITTING IMAGE AND INCREASING ENTRIES COUNT BY ONE
 app.put('/image', (req, res) => { image.handleImage(req, res, knex) })
 
+//SUBMITTING IMAGE URL
+app.post('/imageurl', (req, res) => { image.handleApiCall(req, res) })
+
 
 // ROOT 
 app.listen(3001, () => {
