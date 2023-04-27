@@ -31,9 +31,8 @@ const returnClarifaiRequestOptions = (input) => {
 
 const handleApiCall = (req, res) => {
     fetch("https://api.clarifai.com/v2/models/" + 'face-detection' + "/outputs", returnClarifaiRequestOptions(req.body.input))
-    .then(data => {
-        res.json(data);
-    })
+    .then(response => response.json())
+    .then(data => res.json(data))
     .catch(err => res.status(400).json('unable to work with API'))
 }
 
