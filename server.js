@@ -24,9 +24,7 @@ app.use(express.json());
 app.use(cors());
 
 // SHOWS PORT IS CONNECTED
-app.get('/', (req, res) => {
-    res.send('success');
-});
+app.get('/', (req, res) => { res.send('success') });
 
 
 // SIGN IN
