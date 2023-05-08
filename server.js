@@ -4,7 +4,7 @@ const cors = require('cors');
 const knex = require('knex')({
   client: 'pg',
   connection: process.env.DATABASE_URL,
-  ssl: { rejectUnathorized: false }
+  ssl: true
 });
 
 const register = require('./controllers/register'); 
