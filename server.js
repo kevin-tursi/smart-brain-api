@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt-nodejs');
 const cors = require('cors');
 const knex = require('knex')({
   client: 'pg',
-  connectionString: process.env.DATABASE_URL,
+  connection: process.env.DATABASE_URL,
   ssl: true
 });
 
